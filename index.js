@@ -40,21 +40,15 @@ function Airplane(name) {
   */
   
  function Person(name, age) {
-    this.name = "Neo"
+    this.neo = name;
     this.stomach = [];
     this.age = 20;
 
     
   };
  
- Person.prototype.eat = function(str){
-    
-     if ( this.stomach.length >= 10 ){
-       return this.stomach.push(str)
-     } else {
-       return this.Person.poop();
-     }
-    
+ Person.prototype.eat = function(){
+     console.log(`${Person.stomach} someFood`)
  };
  Person.prototype.poop = function(){
     this.stomach = "";
