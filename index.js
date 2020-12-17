@@ -92,6 +92,15 @@ function Airplane(name) {
     this.tank += gallons;
   }
   
+  Car.prototype.drive = function(distance){
+    this.odometer += distance;
+    if (this.tank === 0){
+      return `I ran out of fuel at ${this.odometer} miles!`
+    } else {
+      this.tank -= distance/this.milesPerGallon;
+    }
+  }
+
   /*
     TASK 3
       - Write a Baby constructor subclassing Person.
@@ -113,10 +122,10 @@ function Airplane(name) {
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
+    1. When used ina global scope, to imply the value of this object.
+    2. For implicit binding, tying the object with this.
+    3. For new bindings, when used in constructor function.
+    4. Explicit binding, tying new functions with call or apply. 
   */
   
   
